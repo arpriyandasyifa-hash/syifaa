@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sweet Berry – Strawberry Coklat Pistachio</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdf5f1;--blush:#f7dfd9;--wine:#7a2142;--berry:#a02a52;--ink:#4a1223;--pist:#4a7a3a;--pist2:#3c6a2e;--card:#fffaf8;--foot:#6f1d3d;--shadow:0 10px 30px rgba(122,33,66,.12);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#fdf5f1}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.script{font-family:'Dancing Script',cursive}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--pist);outline-offset:3px}
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(253,245,241,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(160,42,82,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo b{display:block;font-family:'Dancing Script';font-size:2rem;line-height:1;color:var(--ink)}
+.logo small{display:block;font-size:.72rem;color:var(--berry);margin-top:2px}
+nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0;font-weight:600;font-size:.95rem}
+nav a{padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover,nav a.on{color:var(--berry);border-color:var(--berry)}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;font-weight:700;color:#fff;transition:transform .2s,box-shadow .2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;fill:currentColor;flex:none}
+.green{background:var(--pist);padding:11px 22px;box-shadow:0 8px 20px rgba(60,106,46,.3)}
+.green:hover{background:var(--pist2)}
+.wine{background:var(--berry);padding:9px 18px;font-size:.85rem;box-shadow:0 6px 14px rgba(160,42,82,.28)}
+.wine:hover{background:var(--wine)}
+/* hero */
+.hero{position:relative;background:linear-gradient(100deg,#f8e4dd 0%,#f6d9d1 55%,#f2cfc6 100%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.2fr;align-items:center;gap:20px;min-height:364px;padding-top:30px;padding-bottom:30px}
+.tag{font-size:1.45rem;color:var(--berry);display:flex;align-items:center;gap:10px;margin:0 0 4px;transform:rotate(-3deg);transform-origin:left}
+h1{margin:0;font-size:clamp(2.2rem,4.6vw,3.5rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;color:#3d0f1e}
+h1 span{display:block;font-family:'Dancing Script';color:var(--pist);font-size:1.28em;font-weight:700;letter-spacing:0;line-height:1}
+.hero p.lead{margin:14px 0 22px;max-width:380px;font-size:1rem}
+.perks{display:flex;gap:26px;flex-wrap:wrap;margin-top:22px;font-size:.8rem}
+.perks div{display:flex;align-items:center;gap:8px}
+.perks svg{width:24px;height:24px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.photo{position:relative;border-radius:34px 0 0 34px;overflow:hidden;margin-right:-24px;box-shadow:var(--shadow);animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;min-height:300px}
+.note{position:absolute;right:26px;bottom:20px;color:#fff;font-size:1.25rem;transform:rotate(-12deg);text-shadow:0 2px 8px rgba(0,0,0,.35)}
+@keyframes rise{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
+/* produk */
+.produk{padding:46px 0 70px;text-align:center}
+.produk h2{display:inline-flex;align-items:center;gap:18px;margin:6px 0 4px;font-size:2rem;color:var(--wine);font-weight:800}
+.produk h2::before,.produk h2::after{content:"";width:28px;height:10px;border-top:2px solid var(--berry);border-bottom:2px solid var(--berry);transform:skewY(-12deg);opacity:.7}
+.produk h2::after{transform:skewY(12deg)}
+.produk>.wrap>p{margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:940px;margin:0 auto;text-align:left}
+.card{background:var(--card);border:1px solid rgba(160,42,82,.1);border-radius:18px;padding:9px 9px 20px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(122,33,66,.2)}
+.card img{width:100%;aspect-ratio:2.4/1;object-fit:cover;border-radius:12px;display:block}
+.card h3{margin:14px 9px 2px;font-size:1.05rem;font-weight:800}
+.card p{margin:0 9px;font-size:.82rem;color:#6b4a54;min-height:2.7em}
+.price{margin:6px 9px 10px;font-size:1.35rem;font-weight:800;color:var(--berry)}
+.card .btn{margin-left:9px}
+/* tentang */
+.about{position:relative;background:var(--blush);padding:56px 0 50px;margin-top:-1px}
+.about::before{content:"";position:absolute;left:0;right:0;top:-24px;height:26px;background:var(--blush);border-radius:50% 50% 0 0/100% 100% 0 0}
+.about .wrap{display:grid;grid-template-columns:260px 1.4fr 1fr;gap:40px;align-items:center}
+.blob{width:230px;height:150px;overflow:hidden;border-radius:60% 40% 55% 45%/55% 50% 50% 45%;box-shadow:var(--shadow);margin:-8px auto}
+.blob img{width:100%;height:100%;object-fit:cover;display:block}
+.about h2,.order h2{margin:0 0 8px;color:var(--wine);font-weight:800;font-size:1.6rem}
+.about p{margin:0;font-size:.92rem;max-width:400px}
+.order{border-left:1px solid rgba(160,42,82,.35);padding-left:44px}
+.order h2{font-size:1.25rem}.order p{margin:0 0 14px;font-size:.88rem}
+/* footer */
+footer{background:var(--foot);color:#f6dfe5;padding:26px 0}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.soc{display:flex;align-items:center;gap:16px;margin:0 auto;font-size:.8rem}
+.soc a{display:flex;transition:.2s}.soc a:hover{transform:scale(1.15)}
+.soc svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.6}
+.soc i{width:1px;height:28px;background:rgba(255,255,255,.4);margin:0 10px}
+.fnote{font-size:1.2rem;color:#f6dfe5;transform:rotate(-6deg)}
+.fleaf{width:42px;opacity:.5}
+@media(max-width:860px){
+nav ul{display:none}
+.hero .wrap{grid-template-columns:1fr}
+.photo{margin:0 -24px;border-radius:26px 26px 0 0}
+.grid{grid-template-columns:1fr;max-width:420px}
+.about .wrap{grid-template-columns:1fr;text-align:center}
+.about p{margin:0 auto}
+.order{border:0;padding:0}
+.logo small{display:none}
+.green.top{padding:9px 14px;font-size:.82rem}
+footer .wrap{justify-content:center;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+
+.cartbtn{position:relative;border:0;background:var(--berry);color:#fff;width:44px;height:44px;border-radius:50%;cursor:pointer;display:grid;place-items:center;flex:none}
+.cartbtn svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round}
+.cartbtn b{position:absolute;top:-4px;right:-4px;background:var(--pist);font-size:.7rem;min-width:19px;height:19px;border-radius:99px;display:grid;place-items:center}
+.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.chip{font:inherit;font-weight:700;font-size:.85rem;border:1.5px solid var(--berry);background:transparent;color:var(--berry);padding:6px 16px;border-radius:99px;cursor:pointer}
+.chip.on{background:var(--berry);color:#fff}
+.grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));max-width:1100px}
+.card{display:flex;flex-direction:column}.card .btn{border:0;font:inherit;font-weight:700;font-size:.85rem;align-self:flex-start}
+.card .meta{margin:0 9px;font-size:.75rem;color:var(--pist);font-weight:700}
+.card .row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-right:9px}
+.card .badge{position:absolute;margin:8px 0 0 8px;background:var(--pist);color:#fff;font-size:.7rem;font-weight:800;padding:2px 10px;border-radius:99px}
+.card .ph{position:relative}
+.alamat{padding:60px 0;background:var(--bg)}
+.sec{text-align:center;color:var(--wine);margin:0 0 28px;font-size:2rem}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.box{background:var(--card);border:1px solid rgba(160,42,82,.12);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.box h3{margin:0 0 6px;color:var(--berry)}.box p{margin:0 0 12px}.mut{font-size:.82rem;color:#7a5560}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;padding:0;margin:32px 0 0;counter-reset:s}
+.steps li{display:flex;flex-direction:column;padding-left:56px;position:relative;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--pist);color:#fff;display:grid;place-items:center;font-weight:800}
+.steps span{font-size:.88rem;color:#6b4a54}
+.ov{position:fixed;inset:0;background:rgba(61,15,30,.45);opacity:0;pointer-events:none;transition:.25s;z-index:40}
+.ov.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--card);z-index:41;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid rgba(160,42,82,.12)}
+.dh h3{margin:0;color:var(--wine)}.x{border:0;background:none;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+.db{flex:1;overflow:auto;padding:12px 20px}
+.it{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px dashed rgba(160,42,82,.2)}
+.it img{width:56px;height:56px;border-radius:10px;object-fit:cover}
+.it b{display:block;font-size:.9rem}.it small{color:var(--berry);font-weight:700}
+.qty{display:flex;align-items:center;gap:8px}.qty button{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--berry);background:#fff;color:var(--berry);font-weight:800;cursor:pointer}
+.empty{text-align:center;color:#7a5560;padding:40px 0}
+.df{padding:14px 20px;border-top:1px solid rgba(160,42,82,.12);display:grid;gap:8px}
+.df input,.df textarea,.df select{width:100%;font:inherit;font-size:.9rem;padding:9px 12px;border:1.5px solid rgba(160,42,82,.25);border-radius:10px;background:#fff;color:var(--ink)}
+.tot{display:flex;justify-content:space-between;font-weight:800;font-size:1.1rem;color:var(--wine)}
+.df .btn{justify-content:center;border:0;font:inherit;font-weight:800;padding:13px;background:var(--pist)}
+.df .btn:disabled{opacity:.5;cursor:not-allowed}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,80px);background:var(--wine);color:#fff;padding:10px 20px;border-radius:99px;z-index:50;transition:.3s;font-weight:700;font-size:.9rem}
+.toast.on{transform:translate(-50%,0)}
+@media(max-width:860px){.green.top{display:none}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.200zm4.5-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.100l-.8 1c-.1.200-.3.200-.5.100-1.400-.7-2.400-1.300-3.300-2.900-.2-.4.200-.4.700-1.300.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.100-.7.300-.7.700-1 1.500-.9 2.500.2 1.100.7 2 1.500 3 1.500 2 3.400 3.100 5.200 3.600.8.200 1.500.2 2.100.1.600-.1 1.500-.6 1.700-1.200.2-.6.200-1.100.2-1.200-.1-.1-.3-.2-.6-.3z"/></symbol>
+<symbol id="berry" viewBox="0 0 40 46"><path d="M20 10C8 8 2 18 5 29c3 9 9 15 15 15s12-6 15-15c3-11-3-21-15-19z" fill="#c5304f"/><path d="M20 10c-4-6-9-6-12-4 4 0 6 2 7 4-5-1-8 1-9 3 4-1 7 0 9 2zm0 0c4-6 9-6 12-4-4 0-6 2-7 4 5-1 8 1 9 3-4-1-7 0-9 2z" fill="#3f7a35"/><g fill="#ffd9a8"><circle cx="13" cy="23" r="1.100"/><circle cx="22" cy="21" r="1.100"/><circle cx="28" cy="27" r="1.100"/><circle cx="17" cy="31" r="1.100"/><circle cx="24" cy="36" r="1.100"/><circle cx="12" cy="35" r="1.100"/></g></symbol>
+</defs></svg>
+
+<header><div class="wrap nav">
+ <a class="logo" href="#home" aria-label="Sweet Berry"><svg width="40" height="46"><use href="#berry"/></svg><span><b>Sweet Berry</b><small class="script">Strawberry Coklat Pistachio</small></span></a>
+ <nav aria-label="Utama"><ul><li><a class="on" href="#home">Home</a></li><li><a href="#produk">Produk</a></li><li><a href="#tentang">Tentang</a></li><li><a href="#alamat">Alamat</a></li></ul></nav>
+ <a class="btn green top" href="https://wa.me/6283850032054?text=Halo%20Sweet%20Berry%2C%20saya%20mau%20pesan" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Chat WhatsApp</a>
+ <button class="cartbtn" id="openCart" aria-label="Buka keranjang"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.400 11h10l2-8H6.500"/><circle cx="9" cy="19.500" r="1.500"/><circle cx="17" cy="19.500" r="1.500"/></svg><b id="cnt">0</b></button>
+</div></header>
+
+<main>
+<section class="hero" id="home"><div class="wrap">
+ <div>
+  <p class="tag script">Camilan Enak, Setiap Saat ♡</p>
+  <h1>Strawberry Coklat <span>Pistachio</span></h1>
+  <p class="lead">Perpaduan strawberry segar, coklat premium, dan topping pistachio yang crunchy. Cocok untuk camilan, hadiah, maupun acara spesial.</p>
+  <a class="btn green" style="padding:13px 30px;font-size:1.02rem" href="#produk"><svg><use href="#wa"/></svg>Pesan Sekarang</a>
+  <div class="perks">
+   <div><svg viewBox="0 0 24 24"><path d="M5 19c0-9 5-14 15-14 0 10-5 15-14 15M5 19l8-8"/></svg>Bahan Pilihan</div>
+   <div><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6zM8.500 12l2.500 2.500 4.500-5"/></svg>Rasa Premium</div>
+   <div><svg viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 9h4l4 3v4h-8"/><circle cx="7" cy="17.500" r="1.800"/><circle cx="18" cy="17.500" r="1.800"/></svg>Pengiriman Cepat</div>
+  </div>
+ </div>
+ <div class="photo"><img src="img/hero.jpg" alt="Sekotak strawberry coklat pistachio"><span class="note script">Rasa yang bikin nagih! ♡</span></div>
+</div></section>
+
+<section class="produk" id="produk"><div class="wrap">
+ <svg width="20" height="24" aria-hidden="true"><use href="#berry"/></svg><br>
+ <h2>Produk Kami</h2>
+ <p>Pilih varian favoritmu, masukkan ke keranjang, lalu pesan lewat WhatsApp.</p>
+ <div class="chips" role="tablist"><button class="chip on" data-f="all">Semua</button><button class="chip" data-f="coklat">Coklat</button><button class="chip" data-f="pist">Pistachio</button><button class="chip" data-f="box">Box &amp; Hampers</button></div>
+ <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="about" id="tentang"><div class="wrap">
+ <div class="blob"><img src="img/tentang.jpg" alt="Strawberry segar dan pistachio"></div>
+ <div><h2><svg width="26" height="30" style="vertical-align:-5px;margin-right:8px"><use href="#berry"/></svg>Tentang Kami</h2>
+  <p>Sweet Berry adalah UMKM yang menyediakan olahan strawberry segar dengan perpaduan coklat dan pistachio. Kami menggunakan bahan pilihan untuk menghasilkan rasa yang lezat dan cocok dinikmati kapan saja.</p></div>
+ <div class="order" id="kontak"><h2>Pesan Sekarang <span class="script">♡</span></h2><p>Ingin order? Hubungi kami melalui WhatsApp.</p>
+  <a class="btn green" href="https://wa.me/6283850032054?text=Halo%20Sweet%20Berry%2C%20saya%20mau%20pesan" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Chat WhatsApp</a></div>
+</div></section>
+<section class="alamat" id="alamat"><div class="wrap">
+ <h2 class="sec">Alamat &amp; Cara Pesan</h2>
+ <div class="info">
+  <div class="box"><h3>Alamat</h3><p id="addr">Jl. Braga No. 18, Braga, Sumur Bandung<br>Kota Bandung, Jawa Barat 40111</p><a class="btn wine" id="maps" target="_blank" rel="noopener" href="#">Buka di Google Maps</a></div>
+  <div class="box"><h3>Jam Buka</h3><p>Setiap hari<br>09.00 – 20.00</p><p class="mut">Pre-order H-1 untuk box &amp; hampers.</p></div>
+  <div class="box"><h3>Kontak</h3><p>WhatsApp<br><b>0838-5003-2054</b></p><a class="btn green" style="padding:9px 18px;font-size:.85rem" href="https://wa.me/6283850032054" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Chat WhatsApp</a></div>
+ </div>
+ <ol class="steps"><li><b>Pilih varian</b><span>Tambahkan ke keranjang.</span></li><li><b>Isi data</b><span>Nama, alamat, dan tanggal.</span></li><li><b>Kirim lewat WhatsApp</b><span>Kami konfirmasi dan proses.</span></li></ol>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <svg class="fleaf" viewBox="0 0 40 50" fill="none" stroke="#fff" stroke-width="1.200"><path d="M20 48V20M20 30C8 28 6 16 8 6c10 2 14 10 12 24zM20 24c8-2 12-8 12-16-8 0-12 6-12 16z"/></svg>
+ <div class="soc"><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r=".6"/></svg></a><a href="https://wa.me/6283850032054" aria-label="WhatsApp"><svg viewBox="0 0 24 24" style="fill:#fff;stroke:none"><use href="#wa"/></svg></a><i></i><span>© 2026 Sweet Berry - Strawberry Coklat Pistachio</span></div>
+ <span class="fnote script">Manisnya Bikin Happy ♡</span>
+</div></footer>
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="drawer" aria-label="Keranjang">
+ <div class="dh"><h3>Keranjang Kamu</h3><button class="x" id="close" aria-label="Tutup">×</button></div>
+ <div class="db" id="items"></div>
+ <div class="df" id="form">
+  <div class="tot"><span>Total</span><span id="total">Rp0</span></div>
+  <input id="nama" placeholder="Nama kamu" autocomplete="name">
+  <select id="metode"><option value="Diantar">Diantar ke alamat</option><option value="Ambil di toko">Ambil di toko</option></select>
+  <textarea id="alamatIn" rows="2" placeholder="Alamat pengantaran lengkap"></textarea>
+  <input id="tgl" type="date">
+  <input id="cat" placeholder="Catatan (opsional)">
+  <button class="btn" id="kirim" disabled>Pesan lewat WhatsApp</button>
+ </div>
+</aside>
+<div class="toast" id="toast"></div>
+<script>
+const PHONE="6283850032054";
+const IM={p1:"img/produk-1.jpg",p2:"img/produk-2.jpg",p3:"img/produk-3.jpg",hero:"img/hero.jpg"};
+const P=[
+{id:1,n:"Strawberry Coklat",d:"Strawberry segar dengan balutan coklat lezat.",p:25000,i:"p1",c:"coklat",m:"Isi 3 pcs"},
+{id:2,n:"Strawberry Pistachio",d:"Strawberry segar dengan coklat dan topping pistachio.",p:30000,i:"p2",c:"pist",m:"Isi 3 pcs",b:"Terlaris"},
+{id:3,n:"Premium Pistachio",d:"Strawberry premium dengan coklat dan topping pistachio lebih banyak.",p:35000,i:"p3",c:"pist",m:"Isi 3 pcs"},
+{id:4,n:"Dark Choco Drizzle",d:"Coklat hitam pekat dengan siraman coklat putih.",p:28000,i:"p1",c:"coklat",m:"Isi 3 pcs",pos:"90% 50%"},
+{id:5,n:"White Choco Pistachio",d:"Coklat putih lembut dengan taburan pistachio crunchy.",p:32000,i:"p3",c:"pist",m:"Isi 3 pcs",pos:"10% 50%",b:"Baru"},
+{id:6,n:"Mix Box (6 pcs)",d:"Campuran semua varian dalam satu box kraft.",p:150000,i:"hero",c:"box",m:"Isi 6 pcs",pos:"60% 40%"},
+{id:7,n:"Gift Box (12 pcs)",d:"Hampers manis untuk hadiah ulang tahun dan anniversary.",p:290000,i:"hero",c:"box",m:"Isi 12 pcs",pos:"30% 60%",b:"Favorit hadiah"},
+{id:8,n:"Party Box (24 pcs)",d:"Untuk acara, arisan, dan kantor. Pre-order H-1.",p:550000,i:"hero",c:"box",m:"Isi 24 pcs",pos:"80% 70%"}];
+const rp=n=>"Rp"+n.toLocaleString("id-ID");
+const $=s=>document.querySelector(s);
+let cart={};
+try{cart=JSON.parse(localStorage.getItem("sb_cart")||"{}")}catch(e){}
+const save=()=>{try{localStorage.setItem("sb_cart",JSON.stringify(cart))}catch(e){}};
+function grid(f="all"){
+ $("#grid").innerHTML=P.filter(x=>f=="all"||x.c==f).map(x=>`<article class="card"><div class="ph">${x.b?`<span class="badge">${x.b}</span>`:""}<img src="${IM[x.i]}" alt="${x.n}" style="object-position:${x.pos||"center"}"></div><h3>${x.n}</h3><p>${x.d}</p><p class="meta">${x.m}</p><div class="row"><div class="price">${rp(x.p)}</div></div><button class="btn wine" data-add="${x.id}" style="margin-top:4px">+ Tambah ke keranjang</button></article>`).join("");
+}
+function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("on"),1600)}
+function render(){
+ const ids=Object.keys(cart).filter(k=>cart[k]>0);let tot=0,n=0;
+ $("#items").innerHTML=ids.length?ids.map(k=>{const x=P.find(p=>p.id==k);tot+=x.p*cart[k];n+=cart[k];return `<div class="it"><img src="${IM[x.i]}" alt="" style="object-position:${x.pos||"center"}"><div><b>${x.n}</b><small>${rp(x.p)}</small></div><div class="qty"><button data-m="${k}" aria-label="Kurangi">−</button><span>${cart[k]}</span><button data-p="${k}" aria-label="Tambah">+</button></div></div>`}).join(""):'<div class="empty">Keranjang masih kosong.<br>Pilih varian favoritmu dulu ya.</div>';
+ $("#total").textContent=rp(tot);$("#cnt").textContent=n;$("#kirim").disabled=!ids.length;$("#form").style.display=ids.length?"grid":"none";
+ save();
+}
+const open=o=>{$("#drawer").classList.toggle("on",o);$("#ov").classList.toggle("on",o)};
+document.addEventListener("click",e=>{
+ const t=e.target.closest("button");if(!t)return;
+ if(t.dataset.add){cart[t.dataset.add]=(cart[t.dataset.add]||0)+1;render();toast("Ditambahkan ke keranjang")}
+ else if(t.dataset.p){cart[t.dataset.p]++;render()}
+ else if(t.dataset.m){cart[t.dataset.m]--;if(cart[t.dataset.m]<1)delete cart[t.dataset.m];render()}
+ else if(t.dataset.f){document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",c==t));grid(t.dataset.f)}
+});
+$("#openCart").onclick=()=>open(true);$("#close").onclick=$("#ov").onclick=()=>open(false);
+document.addEventListener("keydown",e=>{if(e.key=="Escape")open(false)});
+$("#metode").onchange=e=>$("#alamatIn").style.display=e.target.value=="Diantar"?"block":"none";
+$("#kirim").onclick=()=>{
+ const nama=$("#nama").value.trim(),m=$("#metode").value,al=$("#alamatIn").value.trim();
+ if(!nama){toast("Isi nama dulu ya");$("#nama").focus();return}
+ if(m=="Diantar"&&!al){toast("Isi alamat pengantaran");$("#alamatIn").focus();return}
+ let tot=0;const L=Object.keys(cart).map(k=>{const x=P.find(p=>p.id==k);tot+=x.p*cart[k];return `- ${x.n} x${cart[k]} = ${rp(x.p*cart[k])}`});
+ const msg=`Halo Sweet Berry, saya mau pesan:\n${L.join("\n")}\n\nTotal: ${rp(tot)}\nNama: ${nama}\nMetode: ${m}${m=="Diantar"?"\nAlamat: "+al:""}${$("#tgl").value?"\nTanggal: "+$("#tgl").value:""}${$("#cat").value?"\nCatatan: "+$("#cat").value:""}`;
+ window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg),"_blank");
+};
+$("#maps").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent($("#addr").innerText.replace(/\n/g,", "));
+$("#tgl").min=new Date().toISOString().slice(0,10);
+grid();render();
+</script>
+</body></html>
