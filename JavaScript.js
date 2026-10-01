@@ -1,5 +1,5 @@
 const PHONE="6283850032054";
-const IM={p1:"img/produk-1.jpg",p2:"img/produk-2.jpg",p3:"img/produk-3.jpg",hero:"img/hero.jpg"};
+const IM={p1:"produk-1.jpg",p2:"produk-2.jpg",p3:"produk-3.jpg",hero:"hero.jpg"};
 const P=[
 {id:1,n:"Strawberry Coklat",d:"Strawberry segar dengan balutan coklat lezat.",p:25000,i:"p1",c:"coklat",m:"Isi 3 pcs"},
 {id:2,n:"Strawberry Pistachio",d:"Strawberry segar dengan coklat dan topping pistachio.",p:30000,i:"p2",c:"pist",m:"Isi 3 pcs",b:"Terlaris"},
